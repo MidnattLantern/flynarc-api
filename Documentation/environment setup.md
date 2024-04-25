@@ -30,6 +30,8 @@ CLOUDINARY_STORAGE = {
 `
 - `MEDIA_URL = '/media/'`
 - `DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'`
+The name for placeholder profile picture is "default_profile_rmkaor"
+The name for placeholder picture is "default_post_y8afhe"
 
 settings.py Installed apps
 ---

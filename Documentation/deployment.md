@@ -49,7 +49,7 @@ Connecting to the local database during development, and PostgreSQL for deployme
 12. Create a Procfile and add the content:
 `
 release: python manage.py makemigrations && python manage.py migrate
-web: gunicorn drf_api.wsgi
+web: gunicorn flynarc_api.wsgi
 `
 
 13. Add the Heroku link to allowed hosts

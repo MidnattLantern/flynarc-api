@@ -84,3 +84,21 @@ Make up a new secret key that is different from the original. In env.py:
 
 20. Ensure the requirements are up to date:
 `pip3 freeze > requirements.txt`
+
+21. Add these config variables on Heroku:
+1. KEY: `CLOUDINARY_URL`
+1. VALUE: `cloudinary://...`
+
+2. KEY: `DATABASE_URL`
+2. VALUE: `postgres://...`
+
+
+3. KEY: `DISABLE_COLLECTSTATIC`
+3. VALUE: `1`
+
+4. KEY: `SECRET_KEY`
+4. VALUE: (the same from IDE env.py)
+
+22. Then connect to Github repository
+
+During front-end devlopment, it can be helpful to keep the debug true to find errors. This isn't recomended however and should be a last plan c thing.

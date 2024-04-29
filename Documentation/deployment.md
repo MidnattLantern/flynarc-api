@@ -99,6 +99,9 @@ Make up a new secret key that is different from the original. In env.py:
 4. KEY: `SECRET_KEY`
 4. VALUE: (the same from IDE env.py)
 
+5. KEY: `ALLOWED_HOST`
+5. VALUE: (url to deployed API)
+
 22. Then connect to Github repository
 
 During front-end devlopment, it can be helpful to keep the debug true to find errors. This isn't recomended however and should be a last plan c thing.

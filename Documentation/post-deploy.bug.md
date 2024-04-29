@@ -1,20 +1,15 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+To patch a bug that wasn't addressed, go to views.py inside flynarc_api directory, and import:
+`
 from .settings import (
     JWT_AUTH_COOKIE,
     JWT_AUTH_REFRESH_COOKIE,
     JWT_AUTH_SAMESITE,
     JWT_AUTH_SECURE,
 )
+`
 
-
-@api_view()
-def root_route(request):
-    return Response({
-        'message': 'Flynarc API'
-    })
-
-# dj-rest-auth logout view fix
+Then add this block:
+`
 @api_view(['POST'])
 def logout_route(request):
     response = Response()
@@ -37,3 +32,10 @@ def logout_route(request):
         secure=JWT_AUTH_SECURE,
     )
     return response
+`
+
+in urls.py import logout_route with root_route, then add these above `api-auth` route:
+`
+    path('dj-rest-auth/logout/', logout_route),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
+`

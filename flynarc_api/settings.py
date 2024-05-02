@@ -63,7 +63,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['flynarc-api-824d94b4a80f.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),]
+#ALLOWED_HOSTS = ['flynarc-api-824d94b4a80f.herokuapp.com']
 
 
 # Application definition

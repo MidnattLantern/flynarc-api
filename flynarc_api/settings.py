@@ -32,10 +32,10 @@ REST_FRAMEWORK = {
         if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
     )],
-    'DEFAULT_PAGINATION_CLASS':
-    'rest_framework.pagination.PageNumberPagination',
+    # initially "'rest_framework.pagination.PageNumberPagination',"
+    'DEFAULT_PAGINATION_CLASS': None,
     # initially set to 5
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': None,
     'DATETIME_FORMAT': '%d %b %Y',
 }
 

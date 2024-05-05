@@ -34,7 +34,8 @@ REST_FRAMEWORK = {
     )],
     'DEFAULT_PAGINATION_CLASS':
     'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5,
+    # initially set to 5
+    'PAGE_SIZE': None,
     'DATETIME_FORMAT': '%d %b %Y',
 }
 
@@ -62,7 +63,13 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'flynarc-api-824d94b4a80f.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    os.environ.get('ALLOWED_HOST'),
+    'flynarc-api-824d94b4a80f.herokuapp.com',
+    'localhost',
+    '8000-midnattlante-flynarcapi-cwm37l0sc31.ws-eu110.gitpod.io',
+    '8000-midnattlante-flynarcapi-cwm37l0sc31.ws-eu111.gitpod.io',
+    ]
 
 
 # Application definition

@@ -66,6 +66,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
+    'flynarc-api-824d94b4a80f.herokuapp.com',
     ]
 
 

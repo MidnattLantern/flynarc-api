@@ -32,10 +32,10 @@ REST_FRAMEWORK = {
         if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
     )],
-    'DEFAULT_PAGINATION_CLASS': None,
-#    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': None,
-#    'PAGE_SIZE': 5,
+#    'DEFAULT_PAGINATION_CLASS': None,
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#    'PAGE_SIZE': None,
+    'PAGE_SIZE': 5,
     'DATETIME_FORMAT': '%d %b %Y',
 }
 
@@ -67,6 +67,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
     'flynarc-api-824d94b4a80f.herokuapp.com',
+    '127.0.0.1',
     ]
 
 

@@ -67,7 +67,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
     'flynarc-api-824d94b4a80f.herokuapp.com',
-    '127.0.0.1',
+    '8000-midnattlante-flynarcapi-cwm37l0sc31.ws-eu111.gitpod.io',
     ]
 
 
@@ -93,6 +93,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'user_authentication',
+    'pilotpost',
 ]
 
 SITE_ID = 1
